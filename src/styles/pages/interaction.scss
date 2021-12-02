@@ -1,0 +1,197 @@
+@import "../variables";
+
+.interaction {
+  color: #ffffff;
+  background-color: $primary;
+
+  .aside-description {
+    margin: max(-4vw, -57px) 0;
+  }
+
+  .dedicated-container {
+    padding: min(4vw, 57px) 40px min(3vw, 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content-container {
+    align-self: flex-end;
+    width: min(80vw, 1760px);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.description {
+  width: min(40vw, 894px);
+  margin-right: min(4vw, 90px);
+
+  &__title {
+    font-size: min(3.46vw, 83px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: min(4.16vw, 100px);
+
+    &.interaction {
+      color: #ffffff;
+      margin-bottom: min(2vw, 33px);
+      width: min(25vw, 500px);
+    }
+  }
+
+  &__subtitle {
+    font-size: min(1.75vw, 42px);
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+    &.interaction {
+      color: #ffffff;
+      margin-bottom: min(4vw, 87px);
+
+      span {
+        background-color: #ffffff;
+        display: inline-block;
+        width: min(10vw, 258px);
+        height: 1px;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: min(1vw, 25px);
+    font-weight: 300;
+    line-height: min(1.375vw, 33px);
+    letter-spacing: 0.25px;
+
+    &:not(:last-of-type) {
+      margin-bottom: min(1.66vw, 40px);
+    }
+  }
+}
+
+.options {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__option {
+    width: min(16vw, 384px);
+    height: min(16vw, 384px);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__option:nth-child(1) {
+    position: relative;
+    top: 20px;
+  }
+
+  &__option:nth-child(2) {
+    position: absolute;
+    top: 53%;
+    left: 55%;
+    transform: translate(15px, -53%);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .options {
+    justify-content: space-between;
+
+    &__option:nth-child(1) {
+      top: 0;
+    }
+
+    &__option:nth-child(2) {
+      position: static;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+
+    &__option {
+      width: min(16.6vw, 246px);
+      height: min(16.6vw, 246px);
+    }
+
+    &__option:not(:last-of-type) {
+      margin-bottom: min(3vw, 46px);
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .interaction {
+
+    &__content-container {
+      align-self: flex-end;
+      width: min(80vw, 1760px);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .description {
+      width: min(54.5vw, 840px);
+      margin-right: min(8.4vw, 130px);
+
+      &__title {
+        &.interaction {
+          font-size: min(2.66vw, 41px);
+          text-align: center;
+          margin-bottom: min(2.9vw, 45px);
+          width: 100%;
+        }
+      }
+
+      &__subtitle {
+        &.interaction {
+          position: relative;
+          text-align: center;
+          font-size: min(3vw, 47px);
+          margin-bottom: min(8.7vw, 134px);
+
+          span {
+            position: absolute;
+            //top: 160%;
+            bottom: -60%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            display: inline-block;
+            width: min(19.1vw, 295px);
+            height: min(.2vw, 3px);
+          }
+        }
+      }
+
+      &__paragraph {
+        &.interaction {
+          font-size: min(1.68vw, 26px);
+          text-align: center;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+  .options {
+    justify-self: center;
+
+    &__option {
+      width: min(16vw, 164px);
+      height: min(16vw, 164px);
+    }
+  }
+}

@@ -1,0 +1,239 @@
+@import "../../styles/variables";
+
+@mixin back($back-color) {
+  position: absolute;
+  content: '';
+  background: $back-color;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  z-index: 1;
+  top: 0;
+}
+
+.desktop-events {
+  background: #e8e8e8;
+
+  .main-container {
+    padding: min(7vh, 90px) 20px min(15vh, 125px);
+  }
+
+  .desktop-events__title {
+    margin-bottom: min(6.25vw, 150px);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(24vw, 576px);
+  box-shadow: 0 0 65px 3px rgba(30, 30, 30, 0.26);
+  font-size: 1rem;
+
+  &.active {
+    transform: scale(1.15);
+    width: min(27vw, 576px);
+    z-index: 4;
+  }
+
+  &__title {
+    min-width: 100%;
+    min-height: min(11.8vw, 284px);
+    max-height: 284px;
+    position: relative;
+
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: #ffffff;
+      font-size: min(3.8vw, 89px);
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &-back-img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+      &.left:before {
+        @include back($green)
+      }
+
+      &.center:before {
+        @include back($dark-orange)
+      }
+
+      &.right:before {
+        @include back($yellow-orange)
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 3px;
+
+    &.left, &.center, &.right {
+      height: 5px;
+      margin-bottom: min(0.8vw, 20px);
+    }
+
+    &.left {
+      background-color: $green;
+    }
+
+    &.center {
+      background-color: $dark-orange;
+    }
+
+    &.right {
+      background-color: $yellow-orange;
+    }
+  }
+
+  &__content-wrapper {
+    padding: 0 min(3.75vw, 90px);
+    display: flex;
+    min-height: 200px;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    .card__text {
+      text-align: center;
+      flex-grow: 1;
+      font-size: min(1vw, 22px);
+      font-weight: 300;
+      line-height: min(1.5vw, 33px);
+      letter-spacing: 0.28px;
+      margin-bottom: min(0.66vw, 16px);
+    }
+
+    .card__logo {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: min(0.83vw, 20px);
+
+      &.left {
+        width: min(2.25vw, 54px);
+        height: min(3.66vw, 88px);
+      }
+
+      &.center {
+        width: min(3.75vw, 90px);
+        height: min(4.75vw, 114px);
+      }
+
+      &.right {
+        width: min(2.66vw, 64px);
+        height: min(3.58vw, 86px);
+      }
+
+      img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+
+    .card__button {
+      flex-shrink: 1;
+      color: #ffffff;
+      margin-bottom: min(2vw, 54px);
+      font-size: min(1.5vw, 33px);
+      font-weight: 500;
+      border-radius: 1.5em;
+      cursor: pointer;
+      border: none;
+      padding: .3em 1em;
+
+      &.left {
+        background-color: $green;
+      }
+
+      &.center {
+        background-color: $dark-orange;
+      }
+
+      &.right {
+        background-color: $yellow-orange;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .desktop-events {
+
+    &__items {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .card {
+    width: min(29.6vw, 457px);
+
+    &.active {
+      transform: scale(1.15);
+      //width: min(33vw, 519px);
+      z-index: 10;
+    }
+
+    &__divider {
+      width: 100%;
+      height: 1px;
+
+      &.left, &.center, &.right {
+        height: 2px;
+      }
+    }
+
+    &__content-wrapper {
+      padding: 0 min(4.5vw, 70px);
+      min-height: 50px;
+
+      .card__text {
+        font-size: min(1.3vw, 20px);
+        line-height: min(1.7vw, 26.4px);
+        max-height: min(6.5vw, 100px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desktop-events {
+    display: none;
+  }
+}

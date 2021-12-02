@@ -1,0 +1,110 @@
+.partners {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url(../assets/images/partners/webp/back.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: gray;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    top: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background: #323131;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: -1;
+    top: 0;
+  }
+
+  .main-container {
+    padding: min(2vw, 34px) 20px min(5.5vw, 140px);
+  }
+
+  &__title {
+    margin-bottom: min(6.25vw, 150px);
+  }
+}
+
+.carousel {
+  &-arrow {
+    cursor: pointer;
+    width: min(1.2vw, 29px);
+    height: min(2.33vw, 56px);
+
+    &.right {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  cursor: grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  &:active {
+    cursor: grabbing;
+  }
+
+  .carousel__slide-img {
+    overflow: hidden;
+    width: min(8.33vw, 200px);
+    height: min(2.91vw, 70px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-slide {
+    .carousel__slide-img {
+      width: min(15.26vw, 235px);
+      height: min(5.5vw, 85px);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .swiper-slide {
+    .carousel__slide-img {
+      width: min(15.3vw, 115px);
+      height: min(6vw, 45px);
+    }
+  }
+}
