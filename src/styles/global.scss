@@ -40,7 +40,7 @@ h1 {
     position: relative;
 
     &.partners-text {
-      color: #eaeaea;
+      color: $primary-white;
     }
 
     &.about-us-text {
@@ -53,7 +53,7 @@ h1 {
       font-size: min(4vw, 83px);
       font-weight: 700;
       line-height: min(4vw, 92px);
-      color: white;
+      color:$primary-white;
       margin-bottom: min(4vw, 88px);
     }
   }
@@ -87,7 +87,7 @@ h1 {
     margin-right: 10px;
 
     &.partners-line {
-      background-color: #eaeaea;
+      background-color: $primary-white;
     }
 
     &.about-us-line {
@@ -97,7 +97,7 @@ h1 {
     &.header-line {
       height: min(.4vw, 10px);
       width: min(14vw, 338px);
-      background-color: #eaeaea;
+      background-color: $primary-white;
     }
   }
 
@@ -108,14 +108,14 @@ h1 {
     background-color: #037693;
 
     &.partners-line {
-      background-color: #eaeaea;
+      background-color: $primary-white;
     }
 
     &.header-line {
       height: min(.4vw, 10px);
       width: min(1vw, 24px);
       margin-left: min(1.16vw, 28px);
-      background-color: #eaeaea;
+      background-color: $primary-white;
     }
   }
 
@@ -123,7 +123,7 @@ h1 {
     width: min(.4vw, 10px);
     height: min(.4vw, 10px);
     border-radius: 50%;
-    background-color: #eaeaea;
+    background-color: $primary-white;
   }
 }
 
@@ -138,15 +138,15 @@ h1 {
   border-top: none;
 
   &.interaction {
-    border: 1px solid #ffffff;
+    border: 1px solid $primary-white;
 
     .aside-description__circle,
     .aside-description__line {
-      background-color: #ffffff;
+      background-color: $primary-white;
     }
 
     .aside-description__text {
-      color: #ffffff;
+      color: $primary-white;
     }
   }
 
