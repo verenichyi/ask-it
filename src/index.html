@@ -1,744 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-            name="description"
-            content="Responsive Web Page Ask It"
-    />
-    <title>Ask It</title>
-    <link rel="stylesheet" href="styles/index.scss">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta
+			name="description"
+			content="Responsive Web Page Ask It"
+	/>
+	<title>Ask It</title>
+	<link rel="stylesheet" href="styles/index.scss">
 </head>
 <body>
 <svg class="sprites" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="carousel-arrow" viewBox="0 0 29 56">
-        <g>
-            <g>
-                <path fill="#fff"
-                      d="M3.665 28.02L27.62 2.746a1.64 1.64 0 0 0 0-2.24 1.442 1.442 0 0 0-2.124 0L.474 26.905a1.64 1.64 0 0 0 0 2.24L25.497 55.53c.29.305.678.47 1.057.47.377 0 .766-.153 1.056-.47a1.64 1.64 0 0 0 0-2.24z"/>
-            </g>
-        </g>
-    </symbol>
-    <symbol id="icon-pinterest2" viewBox="0 0 32 32">
-        <path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"></path>
-    </symbol>
-    <symbol id="email" viewBox="0 0 32 24">
-        <g>
-            <g>
-                <path fill="#fff"
-                      d="M32 3.862v16.28C32 22.27 30.244 24 28.085 24H3.913C1.754 24 0 22.27 0 20.143V3.856C0 1.728 1.754-.001 3.913-.001h24.18c2.158 0 3.913 1.736 3.906 3.863zm-1.788 16.28V3.863c0-1.155-.954-2.094-2.126-2.094H3.913c-1.172 0-2.126.94-2.126 2.094v16.28c0 1.155.954 2.095 2.126 2.095h24.18c1.172 0 2.125-.94 2.125-2.094zm-2.172-.99c.358.332.37.893.033 1.245a.899.899 0 0 1-.649.274.895.895 0 0 1-.615-.241l-7.959-7.452-2.231 1.97a.903.903 0 0 1-1.192.007l-2.172-1.912-8.005 7.38a.902.902 0 0 1-1.264-.046.875.875 0 0 1 .04-1.246l7.885-7.275L3.992 4.88a.871.871 0 0 1-.073-1.246.902.902 0 0 1 1.265-.072l8.568 7.556c.053.04.1.078.145.124 0 .006.007.013.014.02l2.105 1.853L26.81 3.568a.908.908 0 0 1 1.264.066.876.876 0 0 1-.066 1.246l-7.826 6.917z"/>
-            </g>
-        </g>
-    </symbol>
+	<symbol id="carousel-arrow" viewBox="0 0 29 56">
+		<g>
+			<g>
+				<path fill="#fff"
+				      d="M3.665 28.02L27.62 2.746a1.64 1.64 0 0 0 0-2.24 1.442 1.442 0 0 0-2.124 0L.474 26.905a1.64 1.64 0 0 0 0 2.24L25.497 55.53c.29.305.678.47 1.057.47.377 0 .766-.153 1.056-.47a1.64 1.64 0 0 0 0-2.24z"/>
+			</g>
+		</g>
+	</symbol>
+	<symbol id="icon-pinterest2" viewBox="0 0 32 32">
+		<path d="M16 0c-8.825 0-16 7.175-16 16s7.175 16 16 16 16-7.175 16-16-7.175-16-16-16zM16 29.863c-1.431 0-2.806-0.219-4.106-0.619 0.563-0.919 1.412-2.431 1.725-3.631 0.169-0.65 0.863-3.294 0.863-3.294 0.45 0.863 1.775 1.594 3.175 1.594 4.181 0 7.194-3.844 7.194-8.625 0-4.581-3.738-8.006-8.544-8.006-5.981 0-9.156 4.019-9.156 8.387 0 2.031 1.081 4.563 2.813 5.369 0.262 0.125 0.4 0.069 0.463-0.188 0.044-0.194 0.281-1.131 0.387-1.575 0.031-0.137 0.019-0.262-0.094-0.4-0.575-0.694-1.031-1.975-1.031-3.162 0-3.056 2.313-6.019 6.256-6.019 3.406 0 5.788 2.319 5.788 5.637 0 3.75-1.894 6.35-4.356 6.35-1.363 0-2.381-1.125-2.050-2.506 0.394-1.65 1.15-3.425 1.15-4.613 0-1.063-0.569-1.95-1.756-1.95-1.394 0-2.506 1.438-2.506 3.369 0 1.225 0.412 2.056 0.412 2.056s-1.375 5.806-1.625 6.887c-0.281 1.2-0.169 2.881-0.050 3.975-5.156-2.012-8.813-7.025-8.813-12.9 0-7.656 6.206-13.863 13.862-13.863s13.863 6.206 13.863 13.863c0 7.656-6.206 13.863-13.863 13.863z"></path>
+	</symbol>
+	<symbol id="email" viewBox="0 0 32 24">
+		<g>
+			<g>
+				<path fill="#fff"
+				      d="M32 3.862v16.28C32 22.27 30.244 24 28.085 24H3.913C1.754 24 0 22.27 0 20.143V3.856C0 1.728 1.754-.001 3.913-.001h24.18c2.158 0 3.913 1.736 3.906 3.863zm-1.788 16.28V3.863c0-1.155-.954-2.094-2.126-2.094H3.913c-1.172 0-2.126.94-2.126 2.094v16.28c0 1.155.954 2.095 2.126 2.095h24.18c1.172 0 2.125-.94 2.125-2.094zm-2.172-.99c.358.332.37.893.033 1.245a.899.899 0 0 1-.649.274.895.895 0 0 1-.615-.241l-7.959-7.452-2.231 1.97a.903.903 0 0 1-1.192.007l-2.172-1.912-8.005 7.38a.902.902 0 0 1-1.264-.046.875.875 0 0 1 .04-1.246l7.885-7.275L3.992 4.88a.871.871 0 0 1-.073-1.246.902.902 0 0 1 1.265-.072l8.568 7.556c.053.04.1.078.145.124 0 .006.007.013.014.02l2.105 1.853L26.81 3.568a.908.908 0 0 1 1.264.066.876.876 0 0 1-.066 1.246l-7.826 6.917z"/>
+			</g>
+		</g>
+	</symbol>
 </svg>
 <header class="header section-1">
-    <div class="navigation">
-        <div class="dedicated-container">
-            <div class="navigation__wrapper">
-                <div class="navigation__logo">
-                    <div class="navigation__logo-wrapper">
-                        <picture>
-                            <source srcset="assets/images/header/webp/logo.webp" type="image/webp">
-                            <source srcset="assets/images/header/logo.png" type="image/png">
-                            <img src="assets/images/header/logo.png" alt="logo">
-                        </picture>
-                    </div>
-                </div>
-                <div class="navigation__menu-icon" id="menu-icon">
-                    <span></span>
-                </div>
-                <nav class="navigation__nav nav-menu" id="nav-menu">
-                    <ul class="nav-menu__list">
-                        <li class="nav-menu__item">
-                            <a class="nav-menu__link" data-text="Home" data-goto=".section-1" href="#">Home</a>
-                        </li>
-                        <li class="nav-menu__item active">
-                            <a class="nav-menu__link" data-text="How it works" data-goto=".section-2" href="#">How it
-                                works</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a class="nav-menu__link" data-text="Features" data-goto=".section-3" href="#">Features</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a class="nav-menu__link" data-text="Partners" data-goto=".section-4" href="#">Partners</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a class="nav-menu__link" data-text="Events" data-goto=".section-5"
-                               data-gotoSpecial=".section-5.1" href="#">Events</a>
-                        </li>
-                        <li class="nav-menu__item">
-                            <a class="nav-menu__link" data-text="About us" data-goto=".section-6" href="#">About us</a>
-                        </li>
-                    </ul>
-                    <div class="nav-menu__account-manage account-manage">
-                        <div class="account-manage__log-in account-manage-item">
-                            <div class="account-manage__icon">
-                                <img src="assets/images/header/sign-in.png" alt="sign in">
-                            </div>
-                            <div class="account-manage__text">Log in</div>
-                        </div>
-                        <div class="account-manage__register account-manage-item">
-                            <div class="account-manage__icon">
-                                <img src="assets/images/header/avatar.png" alt="avatar">
-                            </div>
-                            <div class="account-manage__text">Register</div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="header__content">
-        <div class="dedicated-container">
-            <div class="header__content-description">
-                <div class="header-title">
-                    <div class="header__content-description-title">Live Interaction From Audience</div>
-                    <div class="after-line header-line right">
-                        <div class="after-line__long header-line"></div>
-                        <div class="after-line__short header-line"></div>
-                        <div class="after-line__dot"></div>
-                    </div>
-                </div>
-                <div class="header__content-description-subtitle">Q&A, Polls and Slide-sharing for Events</div>
-                <div class="header__content-description-buttons">
-                    <div class="header__content-description-button create-button">Create a event</div>
-                    <div class="glued-buttons">
-                        <div class="header__content-description-button join-button">Join event</div>
-                        <div class="header__content-description-button type-button active">type code</div>
-                    </div>
-                </div>
-            </div>
-            <div class="header__content-image">
-                <picture>
-                    <source srcset='assets/images/header/webp/iphone.webp' type='image/webp'>
-                    <source srcset='assets/images/header/iphone.png' type=image/png'>
+	<div class="navigation">
+		<div class="dedicated-container">
+			<div class="navigation__wrapper">
+				<div class="navigation__logo">
+					<div class="navigation__logo-wrapper">
+						<picture>
+							<source srcset="assets/images/header/webp/logo.webp" type="image/webp">
+							<source srcset="assets/images/header/logo.png" type="image/png">
+							<img src="assets/images/header/logo.png" alt="logo">
+						</picture>
+					</div>
+				</div>
+				<div class="navigation__menu-icon" id="menu-icon">
+					<span></span>
+				</div>
+				<nav class="navigation__nav nav-menu" id="nav-menu">
+					<ul class="nav-menu__list">
+						<li class="nav-menu__item">
+							<a class="nav-menu__link" data-text="Home" data-goTo=".section-1" href="#">Home</a>
+						</li>
+						<li class="nav-menu__item active">
+							<a class="nav-menu__link" data-text="How it works" data-goTo=".section-2" href="#">How it
+								works</a>
+						</li>
+						<li class="nav-menu__item">
+							<a class="nav-menu__link" data-text="Features" data-goTo=".section-3" href="#">Features</a>
+						</li>
+						<li class="nav-menu__item">
+							<a class="nav-menu__link" data-text="Partners" data-goTo=".section-4" href="#">Partners</a>
+						</li>
+						<li class="nav-menu__item">
+							<a class="nav-menu__link" data-text="Events" data-goTo=".section-5"
+							   data-gotoSpecial=".section-5.1" href="#">Events</a>
+						</li>
+						<li class="nav-menu__item">
+							<a class="nav-menu__link" data-text="About us" data-goTo=".section-6" href="#">About us</a>
+						</li>
+					</ul>
+					<div class="nav-menu__account-manage account-manage">
+						<div class="account-manage__log-in account-manage-item">
+							<div class="account-manage__icon">
+								<img src="assets/images/header/sign-in.png" alt="sign in">
+							</div>
+							<div class="account-manage__text">Log in</div>
+						</div>
+						<div class="account-manage__register account-manage-item">
+							<div class="account-manage__icon">
+								<img src="assets/images/header/avatar.png" alt="avatar">
+							</div>
+							<div class="account-manage__text">Register</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="header__content">
+		<div class="dedicated-container">
+			<div class="header__content-description">
+				<div class="header-title">
+					<div class="header__content-description-title">Live Interaction From Audience</div>
+					<div class="after-line header-line right">
+						<div class="after-line__long header-line"></div>
+						<div class="after-line__short header-line"></div>
+						<div class="after-line__dot"></div>
+					</div>
+				</div>
+				<div class="header__content-description-subtitle">Q&A, Polls and Slide-sharing for Events</div>
+				<div class="header__content-description-buttons">
+					<div class="header__content-description-button create-button">Create a event</div>
+					<div class="glued-buttons">
+						<div class="header__content-description-button join-button">Join event</div>
+						<div class="header__content-description-button type-button active">type code</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__content-image">
+				<picture>
+					<source srcset='assets/images/header/webp/iphone.webp' type='image/webp'>
+					<source srcset='assets/images/header/iphone.png' type=image/png'>
 
-                    <img src="assets/images/header/iphone.png" alt="iphone">
-                </picture>
-            </div>
-        </div>
-    </div>
+					<img src="assets/images/header/iphone.png" alt="iphone">
+				</picture>
+			</div>
+		</div>
+	</div>
 </header>
 <main>
-    <section class="how-it-works section-2">
-        <div class="dedicated-container">
-            <div class="how-it-works__title section-title">
-                <div class="section-title__text">
-                    <div>How it works</div>
-                    <div class="after-line">
-                        <div class="after-line__long"></div>
-                        <div class="after-line__short"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="how-it-works__items">
-                <div class="how-it-works__item work-item">
-                    <div class="work-item__icon-container">
-                        <picture>
-                            <source srcset='./assets/images/how-it-works/withBorder/webp/free-account.webp'
-                                    type='image/webp'>
-                            <source srcset='./assets/images/how-it-works/withBorder/free-account.png' type=image/png'>
+	<section class="how-it-works section-2">
+		<div class="dedicated-container">
+			<div class="how-it-works__title section-title">
+				<div class="section-title__text">
+					<div>How it works</div>
+					<div class="after-line">
+						<div class="after-line__long"></div>
+						<div class="after-line__short"></div>
+					</div>
+				</div>
+			</div>
+			<div class="how-it-works__items">
+				<div class="how-it-works__item work-item">
+					<div class="work-item__icon-container">
+						<picture>
+							<source srcset='./assets/images/how-it-works/withBorder/webp/free-account.webp'
+							        type='image/webp'>
+							<source srcset='./assets/images/how-it-works/withBorder/free-account.png' type=image/png'>
 
-                            <img src="./assets/images/how-it-works/withBorder/free-account.png" alt="free account">
-                        </picture>
-                    </div>
-                    <div class="work-item__text">Create a FREE<br/>account with us</div>
-                </div>
-                <div class="how-it-works__item work-item">
-                    <div class="work-item__icon-container">
-                        <picture>
-                            <source srcset='./assets/images/how-it-works/withBorder/webp/discuss-issue.webp'
-                                    type='image/webp'>
-                            <source srcset='./assets/images/how-it-works/withBorder/discuss-issue.png' type=image/png'>
+							<img src="./assets/images/how-it-works/withBorder/free-account.png" alt="free account">
+						</picture>
+					</div>
+					<div class="work-item__text">Create a FREE<br/>account with us</div>
+				</div>
+				<div class="how-it-works__item work-item">
+					<div class="work-item__icon-container">
+						<picture>
+							<source srcset='./assets/images/how-it-works/withBorder/webp/discuss-issue.webp'
+							        type='image/webp'>
+							<source srcset='./assets/images/how-it-works/withBorder/discuss-issue.png' type=image/png'>
 
-                            <img src="./assets/images/how-it-works/withBorder/discuss-issue.png" alt="discuss issue">
-                        </picture>
-                    </div>
-                    <div class="work-item__text">Create your own event or Q&A session</div>
-                </div>
-                <div class="how-it-works__item work-item">
-                    <div class="work-item__icon-container">
-                        <picture>
-                            <source srcset='./assets/images/how-it-works/withBorder/webp/qr-code.webp'
-                                    type='image/webp'>
-                            <source srcset='./assets/images/how-it-works/withBorder/qr-code.png' type=image/png'>
+							<img src="./assets/images/how-it-works/withBorder/discuss-issue.png" alt="discuss issue">
+						</picture>
+					</div>
+					<div class="work-item__text">Create your own event or Q&A session</div>
+				</div>
+				<div class="how-it-works__item work-item">
+					<div class="work-item__icon-container">
+						<picture>
+							<source srcset='./assets/images/how-it-works/withBorder/webp/qr-code.webp'
+							        type='image/webp'>
+							<source srcset='./assets/images/how-it-works/withBorder/qr-code.png' type=image/png'>
 
-                            <img src="./assets/images/how-it-works/withBorder/qr-code.png" alt="qr code">
-                        </picture>
-                    </div>
-                    <div class="work-item__text">Share your meeting code with the participants</div>
-                </div>
-                <div class="how-it-works__item work-item">
-                    <div class="work-item__icon-container">
-                        <picture>
-                            <source srcset='./assets/images/how-it-works/withBorder/webp/favorites-button.webp'
-                                    type='image/webp'>
-                            <source srcset='./assets/images/how-it-works/withBorder/favorites-button.png'
-                                    type=image/png'>
+							<img src="./assets/images/how-it-works/withBorder/qr-code.png" alt="qr code">
+						</picture>
+					</div>
+					<div class="work-item__text">Share your meeting code with the participants</div>
+				</div>
+				<div class="how-it-works__item work-item">
+					<div class="work-item__icon-container">
+						<picture>
+							<source srcset='./assets/images/how-it-works/withBorder/webp/favorites-button.webp'
+							        type='image/webp'>
+							<source srcset='./assets/images/how-it-works/withBorder/favorites-button.png'
+							        type=image/png'>
 
-                            <img src="./assets/images/how-it-works/withBorder/favorites-button.png"
-                                 alt="favorites button">
-                        </picture>
-                    </div>
-                    <div class="work-item__text">Run your meeting successfully</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="interaction">
-        <div class="dedicated-container">
-            <div class="aside-description interaction">
-                <div class="aside-description__circle"></div>
-                <div class="aside-description__line"></div>
-                <div class="aside-description__text">Interaction</div>
-            </div>
-            <div class="interaction__content-container">
-                <div class="interaction__description description">
-                    <div class="description__title interaction">Interact with thousand of audience in no time</div>
-                    <div class="description__subtitle interaction">Its easier than ever<span></span></div>
-                    <p class="description__paragraph interaction">it’s never been easier to connect with people who
-                        speak this
-                        language. They
-                        want others to build up their self-image and confidence, and digital connectivity
-                        creates ample opportunity to tell your audience why they’re awesome. Move
-                        beyond general flattery and focus on specifics. Ask yourself, “How can I make
-                        my audience feel good about themselves?”</p>
-                    <p class="description__paragraph interaction">One option might be developing a blog series that
-                        focuses on
-                        industry wins, or
-                        spotlights companies that are doing something right. Or if you share an article
-                        with your network, you could point out a quote from the author that really
-                        resonates with you. Don’t just tell your audience you love them; tell them why.</p>
-                </div>
-                <div class="interaction__options options">
-                    <div class="options__option">
-                        <picture>
-                            <source srcset='./assets/images/interaction/webp/ask.webp' type='image/webp'>
-                            <source srcset='./assets/images/interaction/ask.png' type=image/png'>
+							<img src="./assets/images/how-it-works/withBorder/favorites-button.png"
+							     alt="favorites button">
+						</picture>
+					</div>
+					<div class="work-item__text">Run your meeting successfully</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="interaction">
+		<div class="dedicated-container">
+			<div class="aside-description interaction">
+				<div class="aside-description__circle"></div>
+				<div class="aside-description__line"></div>
+				<div class="aside-description__text">Interaction</div>
+			</div>
+			<div class="interaction__content-container">
+				<div class="interaction__description description">
+					<div class="description__title interaction">Interact with thousand of audience in no time</div>
+					<div class="description__subtitle interaction">Its easier than ever<span></span></div>
+					<p class="description__paragraph interaction">it’s never been easier to connect with people who
+						speak this
+						language. They
+						want others to build up their self-image and confidence, and digital connectivity
+						creates ample opportunity to tell your audience why they’re awesome. Move
+						beyond general flattery and focus on specifics. Ask yourself, “How can I make
+						my audience feel good about themselves?”</p>
+					<p class="description__paragraph interaction">One option might be developing a blog series that
+						focuses on
+						industry wins, or
+						spotlights companies that are doing something right. Or if you share an article
+						with your network, you could point out a quote from the author that really
+						resonates with you. Don’t just tell your audience you love them; tell them why.</p>
+				</div>
+				<div class="interaction__options options">
+					<div class="options__option">
+						<picture>
+							<source srcset='./assets/images/interaction/webp/ask.webp' type='image/webp'>
+							<source srcset='./assets/images/interaction/ask.png' type=image/png'>
 
-                            <img src="assets/images/interaction/ask.png" alt="ask">
-                        </picture>
-                    </div>
-                    <div class="options__option">
-                        <picture>
-                            <source srcset='./assets/images/interaction/webp/choose.webp' type='image/webp'>
-                            <source srcset='./assets/images/interaction/choose.png' type=image/png'>
+							<img src="assets/images/interaction/ask.png" alt="ask">
+						</picture>
+					</div>
+					<div class="options__option">
+						<picture>
+							<source srcset='./assets/images/interaction/webp/choose.webp' type='image/webp'>
+							<source srcset='./assets/images/interaction/choose.png' type=image/png'>
 
-                            <img src="assets/images/interaction/choose.png" alt="choose">
-                        </picture>
-                    </div>
-                    <div class="options__option">
-                        <picture>
-                            <source srcset='./assets/images/interaction/webp/select.webp' type='image/webp'>
-                            <source srcset='./assets/images/interaction/select.png' type=image/png'>
+							<img src="assets/images/interaction/choose.png" alt="choose">
+						</picture>
+					</div>
+					<div class="options__option">
+						<picture>
+							<source srcset='./assets/images/interaction/webp/select.webp' type='image/webp'>
+							<source srcset='./assets/images/interaction/select.png' type=image/png'>
 
-                            <img src="assets/images/interaction/select.png" alt="select">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="features section-3">
-        <div class="features-container">
-            <div class="features__title section-title">
-                <div class="section-title__text">
-                    <div>Features</div>
-                    <div class="after-line">
-                        <div class="after-line__long"></div>
-                        <div class="after-line__short"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="features__wrapper">
-                <div class="features__wrapper-item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/microphone.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/microphone.png' type=image/png'>
+							<img src="assets/images/interaction/select.png" alt="select">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="features section-3">
+		<div class="features-container">
+			<div class="features__title section-title">
+				<div class="section-title__text">
+					<div>Features</div>
+					<div class="after-line">
+						<div class="after-line__long"></div>
+						<div class="after-line__short"></div>
+					</div>
+				</div>
+			</div>
+			<div class="features__wrapper">
+				<div class="features__wrapper-item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/microphone.webp' type='image/webp'>
+							<source srcset='./assets/images/features/microphone.png' type=image/png'>
 
-                            <img src="./assets/images/features/microphone.png" alt="microphone">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">Ask a question</div>
-                </div>
-                <div class="features__wrapper__item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/bar-chart.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/bar-chart.png' type=image/png'>
+							<img src="./assets/images/features/microphone.png" alt="microphone">
+						</picture>
+					</div>
+					<div class="features__item-text">Ask a question</div>
+				</div>
+				<div class="features__wrapper__item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/bar-chart.webp' type='image/webp'>
+							<source srcset='./assets/images/features/bar-chart.png' type=image/png'>
 
-                            <img src="./assets/images/features/bar-chart.png" alt="bar chart">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">Raise a poll</div>
-                </div>
-                <div class="features__wrapper__item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/insight.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/insight.png' type=image/png'>
+							<img src="./assets/images/features/bar-chart.png" alt="bar chart">
+						</picture>
+					</div>
+					<div class="features__item-text">Raise a poll</div>
+				</div>
+				<div class="features__wrapper__item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/insight.webp' type='image/webp'>
+							<source srcset='./assets/images/features/insight.png' type=image/png'>
 
-                            <img src="./assets/images/features/insight.png" alt="insight">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">View statistics</div>
-                </div>
-                <div class="features__wrapper__item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/medal.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/medal.png' type=image/png'>
+							<img src="./assets/images/features/insight.png" alt="insight">
+						</picture>
+					</div>
+					<div class="features__item-text">View statistics</div>
+				</div>
+				<div class="features__wrapper__item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/medal.webp' type='image/webp'>
+							<source srcset='./assets/images/features/medal.png' type=image/png'>
 
-                            <img src="./assets/images/features/medal.png" alt="medal">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">Vote a question</div>
-                </div>
-                <div class="features__wrapper__item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/flag.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/flag.png' type=image/png'>
+							<img src="./assets/images/features/medal.png" alt="medal">
+						</picture>
+					</div>
+					<div class="features__item-text">Vote a question</div>
+				</div>
+				<div class="features__wrapper__item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/flag.webp' type='image/webp'>
+							<source srcset='./assets/images/features/flag.png' type=image/png'>
 
-                            <img src="./assets/images/features/flag.png" alt="flag">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">Create a survey</div>
-                </div>
-                <div class="features__wrapper__item features__item">
-                    <div class="features__item-img">
-                        <picture>
-                            <source srcset='./assets/images/features/webp/padlock.webp' type='image/webp'>
-                            <source srcset='./assets/images/features/padlock.png' type=image/png'>
+							<img src="./assets/images/features/flag.png" alt="flag">
+						</picture>
+					</div>
+					<div class="features__item-text">Create a survey</div>
+				</div>
+				<div class="features__wrapper__item features__item">
+					<div class="features__item-img">
+						<picture>
+							<source srcset='./assets/images/features/webp/padlock.webp' type='image/webp'>
+							<source srcset='./assets/images/features/padlock.png' type=image/png'>
 
-                            <img src="./assets/images/features/padlock.png" alt="padlock">
-                        </picture>
-                    </div>
-                    <div class="features__item-text">Privacy ensured</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partners section-4">
-        <div class="main-container">
-            <div class="partners__title section-title">
-                <div class="section-title__text partners-text">
-                    <div>Partners</div>
-                    <div class="after-line right">
-                        <div class="after-line__long partners-line"></div>
-                        <div class="after-line__short partners-line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="partners__carousel carousel swiper">
-                <div class="carousel__wrapper swiper-wrapper">
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/clients-logos-mccann-black.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/clients-logos-mccann-black.png'
-                                        type=image/png'>
+							<img src="./assets/images/features/padlock.png" alt="padlock">
+						</picture>
+					</div>
+					<div class="features__item-text">Privacy ensured</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="partners section-4">
+		<div class="main-container">
+			<div class="partners__title section-title">
+				<div class="section-title__text partners-text">
+					<div>Partners</div>
+					<div class="after-line right">
+						<div class="after-line__long partners-line"></div>
+						<div class="after-line__short partners-line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="partners__carousel carousel swiper">
+				<div class="carousel__wrapper swiper-wrapper">
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/clients-logos-mccann-black.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/clients-logos-mccann-black.png'
+								        type=image/png'>
 
-                                <img src="assets/images/partners/clients-logos-mccann-black.png" alt="mccann">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/clients-logos-un-women-black.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/clients-logos-un-women-black.png'
-                                        type=image/png'>
+								<img src="assets/images/partners/clients-logos-mccann-black.png" alt="mccann">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/clients-logos-un-women-black.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/clients-logos-un-women-black.png'
+								        type=image/png'>
 
-                                <img src="assets/images/partners/clients-logos-un-women-black.png" alt="un women">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/customer-accenture_copy_2.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/customer-accenture_copy_2.png' type=image/png'>
+								<img src="assets/images/partners/clients-logos-un-women-black.png" alt="un women">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/customer-accenture_copy_2.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/customer-accenture_copy_2.png' type=image/png'>
 
-                                <img src="assets/images/partners/customer-accenture_copy_2.png" alt="accenture">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/customer-cisco_copy_2.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/customer-cisco_copy_2.png' type=image/png'>
+								<img src="assets/images/partners/customer-accenture_copy_2.png" alt="accenture">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/customer-cisco_copy_2.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/customer-cisco_copy_2.png' type=image/png'>
 
-                                <img src="assets/images/partners/customer-cisco_copy_2.png" alt="cisco">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/customer-eventbrite_copy_2.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/customer-eventbrite_copy_2.png'
-                                        type=image/png'>
+								<img src="assets/images/partners/customer-cisco_copy_2.png" alt="cisco">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/customer-eventbrite_copy_2.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/customer-eventbrite_copy_2.png'
+								        type=image/png'>
 
-                                <img src="assets/images/partners/customer-eventbrite_copy_2.png" alt="eventbrite">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/customer-zappos_copy_2.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/customer-zappos_copy_2.png' type=image/png'>
+								<img src="assets/images/partners/customer-eventbrite_copy_2.png" alt="eventbrite">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/customer-zappos_copy_2.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/customer-zappos_copy_2.png' type=image/png'>
 
-                                <img src="assets/images/partners/customer-zappos_copy_2.png" alt="zappos">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="carousel__slide swiper-slide">
-                        <div class="carousel__slide-img">
-                            <picture>
-                                <source srcset='./assets/images/partners/webp/customer-siemens_copy.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/partners/customer-siemens_copy.png' type=image/png'>
+								<img src="assets/images/partners/customer-zappos_copy_2.png" alt="zappos">
+							</picture>
+						</div>
+					</div>
+					<div class="carousel__slide swiper-slide">
+						<div class="carousel__slide-img">
+							<picture>
+								<source srcset='./assets/images/partners/webp/customer-siemens_copy.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/partners/customer-siemens_copy.png' type=image/png'>
 
-                                <img src="assets/images/partners/customer-siemens_copy.png" alt="siemens">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <svg class="carousel-arrow left swiper-button-prev">
-                    <use href="#carousel-arrow"/>
-                </svg>
-                <svg class="carousel-arrow right swiper-button-next">
-                    <use href="#carousel-arrow"/>
-                </svg>
-            </div>
-        </div>
-    </section>
-    <section class="events section-5">
-        <div class="desktop-events">
-            <div class="main-container">
-                <div class="desktop-events__title section-title">
-                    <div class="section-title__text">
-                        <div>Events</div>
-                        <div class="after-line">
-                            <div class="after-line__long"></div>
-                            <div class="after-line__short"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="desktop-events__items">
-                    <div class="desktop-events__item card">
-                        <div class="card__title left">
-                            <div class="card__title-back-img left">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/public_speaking.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/public_speaking.jpg' type=image/jpeg'>
+								<img src="assets/images/partners/customer-siemens_copy.png" alt="siemens">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<svg class="carousel-arrow left swiper-button-prev">
+					<use href="#carousel-arrow"/>
+				</svg>
+				<svg class="carousel-arrow right swiper-button-next">
+					<use href="#carousel-arrow"/>
+				</svg>
+			</div>
+		</div>
+	</section>
+	<section class="events section-5">
+		<div class="desktop-events">
+			<div class="main-container">
+				<div class="desktop-events__title section-title">
+					<div class="section-title__text">
+						<div>Events</div>
+						<div class="after-line">
+							<div class="after-line__long"></div>
+							<div class="after-line__short"></div>
+						</div>
+					</div>
+				</div>
+				<div class="desktop-events__items">
+					<div class="desktop-events__item card">
+						<div class="card__title left">
+							<div class="card__title-back-img left">
+								<picture>
+									<source srcset='./assets/images/events/webp/public_speaking.webp' type='image/webp'>
+									<source srcset='./assets/images/events/public_speaking.jpg' type=image/jpeg'>
 
-                                    <img src="assets/images/events/public_speaking.jpg" alt="public speaking">
-                                </picture>
-                            </div>
-                            <div class="card__title-text">External <span>event</span></div>
-                        </div>
-                        <div class="card__divider"></div>
-                        <div class="card__divider left"></div>
-                        <div class="card__content-wrapper">
-                            <div class="card__logo left">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/usb-connection.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/usb-connection.png' type=image/png'>
+									<img src="assets/images/events/public_speaking.jpg" alt="public speaking">
+								</picture>
+							</div>
+							<div class="card__title-text">External <span>event</span></div>
+						</div>
+						<div class="card__divider"></div>
+						<div class="card__divider left"></div>
+						<div class="card__content-wrapper">
+							<div class="card__logo left">
+								<picture>
+									<source srcset='./assets/images/events/webp/usb-connection.webp' type='image/webp'>
+									<source srcset='./assets/images/events/usb-connection.png' type=image/png'>
 
-                                    <img src="assets/images/events/usb-connection.png" alt="usb">
-                                </picture>
-                            </div>
-                            <div class="card__text">Offers customizable on-line registration service for event
-                                organizers.
-                                Includes pricing, features, and types of accounts.
-                            </div>
-                            <button type="button" class="card__button left">Discover</button>
-                        </div>
-                    </div>
-                    <div class="desktop-events__item card active">
-                        <div class="card__title center">
-                            <div class="card__title-back-img center">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/eye.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/eye.jpg' type=image/jpeg'>
+									<img src="assets/images/events/usb-connection.png" alt="usb">
+								</picture>
+							</div>
+							<div class="card__text">Offers customizable on-line registration service for event
+								organizers.
+								Includes pricing, features, and types of accounts.
+							</div>
+							<button type="button" class="card__button left">Discover</button>
+						</div>
+					</div>
+					<div class="desktop-events__item card active">
+						<div class="card__title center">
+							<div class="card__title-back-img center">
+								<picture>
+									<source srcset='./assets/images/events/webp/eye.webp' type='image/webp'>
+									<source srcset='./assets/images/events/eye.jpg' type=image/jpeg'>
 
-                                    <img src="assets/images/events/eye.jpg" alt="eye">
-                                </picture>
-                            </div>
-                            <div class="card__title-text">Interactive <span>event</span></div>
-                        </div>
-                        <div class="card__divider"></div>
-                        <div class="card__divider center"></div>
-                        <div class="card__content-wrapper">
-                            <div class="card__logo center">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/interactivity.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/interactivity.png' type=image/png'>
+									<img src="assets/images/events/eye.jpg" alt="eye">
+								</picture>
+							</div>
+							<div class="card__title-text">Interactive <span>event</span></div>
+						</div>
+						<div class="card__divider"></div>
+						<div class="card__divider center"></div>
+						<div class="card__content-wrapper">
+							<div class="card__logo center">
+								<picture>
+									<source srcset='./assets/images/events/webp/interactivity.webp' type='image/webp'>
+									<source srcset='./assets/images/events/interactivity.png' type=image/png'>
 
-                                    <img src="assets/images/events/interactivity.png" alt="interactivity">
-                                </picture>
-                            </div>
-                            <div class="card__text">Offers customizable on-line registration service for event
-                                organizers.
-                                Includes pricing, features, and types of accounts.
-                            </div>
-                            <button type="button" class="card__button center">Discover</button>
-                        </div>
-                    </div>
-                    <div class="desktop-events__item card">
-                        <div class="card__title right">
-                            <div class="card__title-back-img right">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/office_speaking.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/office_speaking.jpg' type=image/jpeg'>
+									<img src="assets/images/events/interactivity.png" alt="interactivity">
+								</picture>
+							</div>
+							<div class="card__text">Offers customizable on-line registration service for event
+								organizers.
+								Includes pricing, features, and types of accounts.
+							</div>
+							<button type="button" class="card__button center">Discover</button>
+						</div>
+					</div>
+					<div class="desktop-events__item card">
+						<div class="card__title right">
+							<div class="card__title-back-img right">
+								<picture>
+									<source srcset='./assets/images/events/webp/office_speaking.webp' type='image/webp'>
+									<source srcset='./assets/images/events/office_speaking.jpg' type=image/jpeg'>
 
-                                    <img src="assets/images/events/office_speaking.jpg" alt="office speaking">
-                                </picture>
-                            </div>
-                            <div class="card__title-text">Internal <span>event</span></div>
-                        </div>
-                        <div class="card__divider"></div>
-                        <div class="card__divider right"></div>
-                        <div class="card__content-wrapper">
-                            <div class="card__logo right">
-                                <picture>
-                                    <source srcset='./assets/images/events/webp/hard-disk.webp' type='image/webp'>
-                                    <source srcset='./assets/images/events/hard-disk.png' type=image/png'>
+									<img src="assets/images/events/office_speaking.jpg" alt="office speaking">
+								</picture>
+							</div>
+							<div class="card__title-text">Internal <span>event</span></div>
+						</div>
+						<div class="card__divider"></div>
+						<div class="card__divider right"></div>
+						<div class="card__content-wrapper">
+							<div class="card__logo right">
+								<picture>
+									<source srcset='./assets/images/events/webp/hard-disk.webp' type='image/webp'>
+									<source srcset='./assets/images/events/hard-disk.png' type=image/png'>
 
-                                    <img src="assets/images/events/hard-disk.png" alt="hard disk">
-                                </picture>
-                            </div>
-                            <div class="card__text">Offers customizable on-line registration service for event
-                                organizers.
-                                Includes pricing, features, and types of accounts.
-                            </div>
-                            <button type="button" class="card__button right">Discover</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mobile-events">
-            <div class="mobile-events__item interactive">
-                <div class="dedicated-container">
-                    <div class="mobile-events__item-title">Interactive <span>event</span></div>
-                    <div class="mobile-events__item-content content-wrapper">
-                        <div class="mobile-events__item-logo">
-                            <picture>
-                                <source srcset='./assets/images/events/mobile/webp/interactivity.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/events/mobile/interactivity.png' type=image/png'>
+									<img src="assets/images/events/hard-disk.png" alt="hard disk">
+								</picture>
+							</div>
+							<div class="card__text">Offers customizable on-line registration service for event
+								organizers.
+								Includes pricing, features, and types of accounts.
+							</div>
+							<button type="button" class="card__button right">Discover</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-events">
+			<div class="mobile-events__item interactive">
+				<div class="dedicated-container">
+					<div class="mobile-events__item-title">Interactive <span>event</span></div>
+					<div class="mobile-events__item-content content-wrapper">
+						<div class="mobile-events__item-logo">
+							<picture>
+								<source srcset='./assets/images/events/mobile/webp/interactivity.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/events/mobile/interactivity.png' type=image/png'>
 
-                                <img src="assets/images/events/mobile/interactivity.png" alt="interactivity">
-                            </picture>
-                        </div>
-                        <div class="mobile-events__item-text">Offers customizable on-line registration service for event
-                            organizers. Includes
-                            pricing, features, and types of accounts.
-                        </div>
-                    </div>
-                    <div class="mobile-events__item-button">Discover</div>
-                </div>
-            </div>
-            <div class="mobile-events__item internal">
-                <div class="dedicated-container">
-                    <div class="mobile-events__item-title">Internal <span>event</span></div>
-                    <div class="mobile-events__item-content content-wrapper">
-                        <div class="mobile-events__item-logo">
-                            <picture>
-                                <source srcset='./assets/images/events/mobile/webp/hard-disk.webp' type='image/webp'>
-                                <source srcset='./assets/images/events/mobile/hard-disk.png' type=image/png'>
+								<img src="assets/images/events/mobile/interactivity.png" alt="interactivity">
+							</picture>
+						</div>
+						<div class="mobile-events__item-text">Offers customizable on-line registration service for event
+							organizers. Includes
+							pricing, features, and types of accounts.
+						</div>
+					</div>
+					<div class="mobile-events__item-button">Discover</div>
+				</div>
+			</div>
+			<div class="mobile-events__item internal">
+				<div class="dedicated-container">
+					<div class="mobile-events__item-title">Internal <span>event</span></div>
+					<div class="mobile-events__item-content content-wrapper">
+						<div class="mobile-events__item-logo">
+							<picture>
+								<source srcset='./assets/images/events/mobile/webp/hard-disk.webp' type='image/webp'>
+								<source srcset='./assets/images/events/mobile/hard-disk.png' type=image/png'>
 
-                                <img src="assets/images/events/mobile/hard-disk.png" alt="hard disk">
-                            </picture>
-                        </div>
-                        <div class="mobile-events__item-text">Offers customizable on-line registration service for event
-                            organizers. Includes
-                            pricing, features, and types of accounts.
-                        </div>
-                    </div>
-                    <div class="mobile-events__item-button">Discover</div>
-                </div>
-            </div>
-            <div class="mobile-events__item external">
-                <div class="dedicated-container">
-                    <div class="mobile-events__item-title">External <span>event</span></div>
-                    <div class="mobile-events__item-content content-wrapper">
-                        <div class="mobile-events__item-logo">
-                            <picture>
-                                <source srcset='./assets/images/events/mobile/webp/usb-connection.webp'
-                                        type='image/webp'>
-                                <source srcset='./assets/images/events/mobile/usb-connection.png' type=image/png'>
+								<img src="assets/images/events/mobile/hard-disk.png" alt="hard disk">
+							</picture>
+						</div>
+						<div class="mobile-events__item-text">Offers customizable on-line registration service for event
+							organizers. Includes
+							pricing, features, and types of accounts.
+						</div>
+					</div>
+					<div class="mobile-events__item-button">Discover</div>
+				</div>
+			</div>
+			<div class="mobile-events__item external">
+				<div class="dedicated-container">
+					<div class="mobile-events__item-title">External <span>event</span></div>
+					<div class="mobile-events__item-content content-wrapper">
+						<div class="mobile-events__item-logo">
+							<picture>
+								<source srcset='./assets/images/events/mobile/webp/usb-connection.webp'
+								        type='image/webp'>
+								<source srcset='./assets/images/events/mobile/usb-connection.png' type=image/png'>
 
-                                <img src="assets/images/events/mobile/usb-connection.png" alt="usb">
-                            </picture>
-                        </div>
-                        <div class="mobile-events__item-text">Offers customizable on-line registration service for event
-                            organizers. Includes
-                            pricing, features, and types of accounts.
-                        </div>
-                    </div>
-                    <div class="mobile-events__item-button">Discover</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about-us section-6">
-        <div class="dedicated-container">
-            <div class="aside-description">
-                <div class="aside-description__circle"></div>
-                <div class="aside-description__line"></div>
-                <div class="aside-description__text">Know us</div>
-            </div>
-            <div class="about-us__title section-title">
-                <div class="section-title__text">
-                    <div>About us</div>
-                    <div class="after-line right">
-                        <div class="after-line__long about-us-line"></div>
-                        <div class="after-line__short about-us-line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-us__content-container">
-                <div class="about-us__description description">
-                    <div class="description__title">Who we are?</div>
-                    <div class="description__subtitle">What we can do for you <span></span></div>
-                    <p class="description__paragraph">it’s never been easier to connect with people who speak this
-                        language. They
-                        want others to build up their self-image and confidence, and digital connectivity
-                        creates ample opportunity to tell your </p>
-                    <p class="description__paragraph">One option might be developing a blog series that focuses on
-                        industry wins, or
-                        spotlights companies that are doing something right. Or if you share an article
-                        with your network,</p>
-                </div>
-                <div class="about-us__rating rating">
-                    <div class="rating__items">
-                        <div class="rating__item">
-                            <div class="rating__item-circle audience">
-                                <div class="rating__item-circle-small audience"></div>
-                            </div>
-                            <div class="rating__item-counter audience">20,145</div>
-                            <div class="rating__item-title">audience served</div>
-                            <div class="rating__item-line audience"></div>
-                        </div>
-                        <div class="rating__item">
-                            <div class="rating__item-circle hours">
-                                <div class="rating__item-circle-small hours"></div>
-                            </div>
-                            <div class="rating__item-counter hours">5480</div>
-                            <div class="rating__item-title">hours of service</div>
-                            <div class="rating__item-line hours"></div>
-                        </div>
-                        <div class="rating__item">
-                            <div class="rating__item-circle event">
-                                <div class="rating__item-circle-small event"></div>
-                            </div>
-                            <div class="rating__item-counter event">715</div>
-                            <div class="rating__item-title">event covered</div>
-                            <div class="rating__item-line event"></div>
+								<img src="assets/images/events/mobile/usb-connection.png" alt="usb">
+							</picture>
+						</div>
+						<div class="mobile-events__item-text">Offers customizable on-line registration service for event
+							organizers. Includes
+							pricing, features, and types of accounts.
+						</div>
+					</div>
+					<div class="mobile-events__item-button">Discover</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-us section-6">
+		<div class="dedicated-container">
+			<div class="aside-description">
+				<div class="aside-description__circle"></div>
+				<div class="aside-description__line"></div>
+				<div class="aside-description__text">Know us</div>
+			</div>
+			<div class="about-us__title section-title">
+				<div class="section-title__text">
+					<div>About us</div>
+					<div class="after-line right">
+						<div class="after-line__long about-us-line"></div>
+						<div class="after-line__short about-us-line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="about-us__content-container">
+				<div class="about-us__description description">
+					<div class="description__title">Who we are?</div>
+					<div class="description__subtitle">What we can do for you <span></span></div>
+					<p class="description__paragraph">it’s never been easier to connect with people who speak this
+						language. They
+						want others to build up their self-image and confidence, and digital connectivity
+						creates ample opportunity to tell your </p>
+					<p class="description__paragraph">One option might be developing a blog series that focuses on
+						industry wins, or
+						spotlights companies that are doing something right. Or if you share an article
+						with your network,</p>
+				</div>
+				<div class="about-us__rating rating">
+					<div class="rating__items">
+						<div class="rating__item">
+							<div class="rating__item-circle audience">
+								<div class="rating__item-circle-small audience"></div>
+							</div>
+							<div class="rating__item-counter audience">20,145</div>
+							<div class="rating__item-title">audience served</div>
+							<div class="rating__item-line audience"></div>
+						</div>
+						<div class="rating__item">
+							<div class="rating__item-circle hours">
+								<div class="rating__item-circle-small hours"></div>
+							</div>
+							<div class="rating__item-counter hours">5480</div>
+							<div class="rating__item-title">hours of service</div>
+							<div class="rating__item-line hours"></div>
+						</div>
+						<div class="rating__item">
+							<div class="rating__item-circle event">
+								<div class="rating__item-circle-small event"></div>
+							</div>
+							<div class="rating__item-counter event">715</div>
+							<div class="rating__item-title">event covered</div>
+							<div class="rating__item-line event"></div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 <footer class="footer">
-    <div class="dedicated-container">
-        <div class="wrapper">
-            <div class="footer__item ask-it-info">
-                <div class="ask-it-info__logo">
-                    <picture>
-                        <source srcset='./assets/images/footer/logo.webp' type='image/webp'>
-                        <source srcset='./assets/images/footer/logo.png' type=image/png'>
+	<div class="dedicated-container">
+		<div class="wrapper">
+			<div class="footer__item ask-it-info">
+				<div class="ask-it-info__logo">
+					<picture>
+						<source srcset='./assets/images/footer/logo.webp' type='image/webp'>
+						<source srcset='./assets/images/footer/logo.png' type=image/png'>
 
-                        <img src="assets/images/footer/logo.png" alt="logo">
-                    </picture>
-                </div>
-                <div class="ask-it-info__text">We are AskVote.io. We are an online platform for operating events
-                    effectively. We're working on a web application for facilitating anonymous questions and answers
-                    sessions. The application is to be used mainly by corporate and government customers.
-                </div>
-            </div>
-            <div class="footer__item links">
-                <div class="links__wrapper">
-                    <div class="links__item">
-                        <div class="links__item-title">Useful links</div>
-                        <ul class="links__item-list">
-                            <li class="links__item-list-item"><a href="#">Home</a></li>
-                            <li class="links__item-list-item"><a href="#">How it works</a></li>
-                            <li class="links__item-list-item"><a href="#">Terms and conditions</a></li>
-                            <li class="links__item-list-item"><a href="#">Cookies policy</a></li>
-                            <li class="links__item-list-item"><a href="#">Contact Us</a></li>
-                            <li class="links__item-list-item"><a href="#">About us</a></li>
-                            <li class="links__item-list-item"><a href="#">Features</a></li>
-                            <li class="links__item-list-item"><a href="#">Event list</a></li>
-                        </ul>
-                    </div>
-                    <div class="links__item account">
-                        <div class="links__item-title">My account</div>
-                        <ul class="links__item-list">
-                            <li class="links__item-list-item"><a href="#">New account</a></li>
-                            <li class="links__item-list-item"><a href="#">Open a account</a></li>
-                            <li class="links__item-list-item"><a href="#">Manage</a></li>
-                            <li class="links__item-list-item"><a href="#">Change password</a></li>
-                            <li class="links__item-list-item"><a href="#">Delete account</a></li>
-                            <li class="links__item-list-item"><a href="#">Dashboard</a></li>
-                        </ul>
-                    </div>
-                    <div class="links__item social">
-                        <div class="links__item-title">We are social</div>
-                        <ul class="links__item-social-list">
-                            <li class="links__item-social-list-item">
-                                <a href="#"><img src="assets/images/footer/twitter.png" alt="twitter"></a>
-                            </li>
-                            <li class="links__item-social-list-item">
-                                <a href="#">
-                                    <svg class="icon icon-pinterest2">
-                                        <use xlink:href="#icon-pinterest2"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="links__item-social-list-item">
-                                <a href="#"><img src="assets/images/footer/linkedin.png" alt="linkedin"></a>
-                            </li>
-                            <li class="links__item-social-list-item">
-                                <a href="#"><img src="assets/images/footer/facebook.png" alt="twitter"></a>
-                            </li>
-                        </ul>
-                        <form class="links__item-email-form footer-form">
-                            <label class="footer-form__label" for="footer-email">Subscribe to our newsletter</label>
-                            <div class="footer-form__input-wrapper">
-                                <input class="footer-form__input" id="footer-email" type="email"
-                                       placeholder="Email address">
-                                <button class="footer-form__button" type="submit">
-                                    <svg class="footer-form__button-svg">
-                                        <use href="#email"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__item copyright">&copy; 2016 AskVote.io, all rights received</div>
-        </div>
-    </div>
+						<img src="assets/images/footer/logo.png" alt="logo">
+					</picture>
+				</div>
+				<div class="ask-it-info__text">We are AskVote.io. We are an online platform for operating events
+					effectively. We're working on a web application for facilitating anonymous questions and answers
+					sessions. The application is to be used mainly by corporate and government customers.
+				</div>
+			</div>
+			<div class="footer__item links">
+				<div class="links__wrapper">
+					<div class="links__item">
+						<div class="links__item-title">Useful links</div>
+						<ul class="links__item-list">
+							<li class="links__item-list-item"><a href="#">Home</a></li>
+							<li class="links__item-list-item"><a href="#">How it works</a></li>
+							<li class="links__item-list-item"><a href="#">Terms and conditions</a></li>
+							<li class="links__item-list-item"><a href="#">Cookies policy</a></li>
+							<li class="links__item-list-item"><a href="#">Contact Us</a></li>
+							<li class="links__item-list-item"><a href="#">About us</a></li>
+							<li class="links__item-list-item"><a href="#">Features</a></li>
+							<li class="links__item-list-item"><a href="#">Event list</a></li>
+						</ul>
+					</div>
+					<div class="links__item account">
+						<div class="links__item-title">My account</div>
+						<ul class="links__item-list">
+							<li class="links__item-list-item"><a href="#">New account</a></li>
+							<li class="links__item-list-item"><a href="#">Open a account</a></li>
+							<li class="links__item-list-item"><a href="#">Manage</a></li>
+							<li class="links__item-list-item"><a href="#">Change password</a></li>
+							<li class="links__item-list-item"><a href="#">Delete account</a></li>
+							<li class="links__item-list-item"><a href="#">Dashboard</a></li>
+						</ul>
+					</div>
+					<div class="links__item social">
+						<div class="links__item-title">We are social</div>
+						<ul class="links__item-social-list">
+							<li class="links__item-social-list-item">
+								<a href="#"><img src="assets/images/footer/twitter.png" alt="twitter"></a>
+							</li>
+							<li class="links__item-social-list-item">
+								<a href="#">
+									<svg class="icon icon-pinterest2">
+										<use xlink:href="#icon-pinterest2"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="links__item-social-list-item">
+								<a href="#"><img src="assets/images/footer/linkedin.png" alt="linkedin"></a>
+							</li>
+							<li class="links__item-social-list-item">
+								<a href="#"><img src="assets/images/footer/facebook.png" alt="twitter"></a>
+							</li>
+						</ul>
+						<form class="links__item-email-form footer-form">
+							<label class="footer-form__label" for="footer-email">Subscribe to our newsletter</label>
+							<div class="footer-form__input-wrapper">
+								<input class="footer-form__input" id="footer-email" type="email"
+								       placeholder="Email address">
+								<button class="footer-form__button" type="submit">
+									<svg class="footer-form__button-svg">
+										<use href="#email"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer__item copyright">&copy; 2016 AskVote.io, all rights received</div>
+		</div>
+	</div>
 </footer>
 </body>
 </html>

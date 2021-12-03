@@ -1,23 +1,18 @@
-// core version + navigation, pagination modules:
 import Swiper, {Navigation, Pagination} from 'swiper';
-// import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 
 const swiper = new Swiper('.swiper', {
 	slidesPerView: 7,
-	// spaceBetween: 30,
 	loop: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
-		// when window width is >= 320px
 		320: {
 			slidesPerView: 2,
 		},
@@ -39,9 +34,11 @@ const swiper = new Swiper('.swiper', {
 	}
 });
 
+const navigationBlock = document.querySelector('.navigation');
 
-// navigation
-const menuLinks = document.querySelectorAll('.nav-menu__link[data-goto]');
+const navMenuList = document.querySelector('.nav-menu__list');
+
+const menuLinks = document.querySelectorAll('.nav-menu__link[data-goTo]');
 const menuIcon = document.getElementById('menu-icon');
 const navMenu = document.getElementById('nav-menu');
 
@@ -57,13 +54,15 @@ if (menuIcon) {
 
 if (menuLinks) {
 	menuLinks.forEach(menuLink => {
-		const goToBlock = document.querySelector(menuLink.dataset.goto)
+		const goToBlock = document.querySelector(menuLink.dataset.goTo)
 
 		const onMenuLinkClick = (event) => {
 			event.preventDefault();
 
-			if (event.target.dataset.goto && goToBlock) {
-				const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.navigation').offsetHeight;
+			const targetGoToLink = event.target.dataset.goTo;
+
+			if (targetGoToLink && goToBlock) {
+				const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - navigationBlock.offsetHeight;
 
 				navMenu.classList.toggle('active');
 

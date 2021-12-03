@@ -15,7 +15,7 @@
 }
 
 .about-us {
-  color: #2d2d2d;
+  color: $primary-black;
 
   .description {
     margin-right: 0;
@@ -113,7 +113,7 @@
         transform: translate(-50%, -50%);
         width: 64px;
         height: 64px;
-        border: 2px solid #fff;
+        border: 2px solid $primary-white;
         border-radius: 50%;
         @include circle-back-color;
       }
@@ -151,7 +151,7 @@
     }
 
     &-title {
-      color: #2d2d2d;
+      color: $primary-black;
       font-size: min(1.37vw, 33px);
       font-weight: 400;
       text-align: center;
@@ -185,7 +185,6 @@
   }
 
   .description {
-    //width: 100%;
     width: min(78vw, 1200px);
 
     &__title {

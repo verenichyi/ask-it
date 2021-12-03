@@ -12,7 +12,7 @@
 }
 
 .desktop-events {
-  background: #e8e8e8;
+  background: $primary-white;
 
   .main-container {
     padding: min(7vh, 90px) 20px min(15vh, 125px);
@@ -29,7 +29,7 @@
 }
 
 .card {
-  background-color: #fff;
+  background-color: $primary-white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +55,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
-      color: #ffffff;
+      color: $primary-white;
       font-size: min(3.8vw, 89px);
       font-weight: 300;
       text-align: center;
@@ -167,8 +167,7 @@
     }
 
     .card__button {
-      flex-shrink: 1;
-      color: #ffffff;
+      color: $primary-white;
       margin-bottom: min(2vw, 54px);
       font-size: min(1.5vw, 33px);
       font-weight: 500;
@@ -206,7 +205,6 @@
 
     &.active {
       transform: scale(1.15);
-      //width: min(33vw, 519px);
       z-index: 10;
     }
 

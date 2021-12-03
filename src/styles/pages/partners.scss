@@ -1,3 +1,5 @@
+@import "../variables";
+
 .partners {
   position: relative;
 
@@ -7,7 +9,7 @@
     background-image: url(../assets/images/partners/webp/back.webp);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: gray;
+    background-color: $partners-back;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -18,7 +20,7 @@
   &:after {
     position: absolute;
     content: '';
-    background: #323131;
+    background: $partners-back;
     width: 100%;
     height: 100%;
     opacity: 0.8;
@@ -73,6 +75,7 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+
   &:active {
     cursor: grabbing;
   }
