@@ -43,6 +43,10 @@
     width: min(1.2vw, 29px);
     height: min(2.33vw, 56px);
 
+    &:focus{
+      outline: none;
+    }
+
     &.right {
       transform: rotate(180deg);
     }
