@@ -34,45 +34,35 @@ const swiper = new Swiper('.swiper', {
 	}
 });
 
-const navigationBlock = document.querySelector('.navigation');
 
-const navMenuList = document.querySelector('.nav-menu__list');
-
-const menuLinks = document.querySelectorAll('.nav-menu__link[data-goTo]');
+const navigationBlock = document.getElementById('navigation');
+const menuList = document.getElementById('menu-list');
 const menuIcon = document.getElementById('menu-icon');
 const navMenu = document.getElementById('nav-menu');
 
-if (menuIcon) {
-	const onMenuIconClick = (event) => {
-		document.body.classList.toggle('lock');
-		menuIcon.classList.toggle('active');
+
+const onMenuIconClick = () => {
+	document.body.classList.toggle('lock');
+	menuIcon.classList.toggle('active');
+	navMenu.classList.toggle('active');
+}
+
+const onMenuLinkClick = (event) => {
+	event.preventDefault();
+
+	const goToBlock = document.querySelector(event.target.dataset.goto);
+
+	if (goToBlock) {
+		const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - navigationBlock.offsetHeight;
+
 		navMenu.classList.toggle('active');
-	};
 
-	menuIcon.addEventListener('click', onMenuIconClick);
-}
+		window.scrollTo({
+			top: goToBlockValue,
+			behavior: "smooth"
+		})
+	}
+};
 
-if (menuLinks) {
-	menuLinks.forEach(menuLink => {
-		const goToBlock = document.querySelector(menuLink.dataset.goTo)
-
-		const onMenuLinkClick = (event) => {
-			event.preventDefault();
-
-			const targetGoToLink = event.target.dataset.goTo;
-
-			if (targetGoToLink && goToBlock) {
-				const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - navigationBlock.offsetHeight;
-
-				navMenu.classList.toggle('active');
-
-				window.scrollTo({
-					top: goToBlockValue,
-					behavior: "smooth"
-				})
-			}
-		};
-
-		menuLink.addEventListener('click', onMenuLinkClick);
-	})
-}
+menuIcon.addEventListener('click', onMenuIconClick);
+menuList.addEventListener('click', onMenuLinkClick);
