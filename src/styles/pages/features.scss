@@ -1,0 +1,151 @@
+@import "src/styles/variables";
+
+%horizontal-line {
+  position: absolute;
+  content: '';
+  width: min(80%, 426px);
+  height: 2px;
+  background-color: $primary;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+%vertical-line {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: min(80%, 160px);
+  background-color: $primary;
+  right: 0;
+}
+
+.features {
+
+  &-container {
+    width: min(68.3%, 1640px);
+    padding: min(5.5vw, 127px) 40px min(6vw, 140px);
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: min(5vw, 120px);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.features__item {
+  width: min(21.5vw, 518px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+
+  &-img {
+    margin-bottom: 20px;
+  }
+
+  &-text {
+    justify-self: flex-end;
+    color: $primary;
+    font-size: min(1.75vw, 42px);
+    font-weight: 700;
+  }
+
+  &:nth-child(-n+6):after {
+    @extend %vertical-line;
+  }
+
+  &:nth-child(3):after,
+  &:nth-child(6):after {
+    display: none;
+  }
+
+  &:nth-child(-n+6):before {
+    @extend %horizontal-line;
+  }
+
+  &:nth-child(n+4):before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 2104px) {
+  .features__item {
+    width: 40%;
+
+    &:nth-child(2):after,
+    &:nth-child(4):after {
+      display: none;
+    }
+
+    &:nth-child(3):after {
+      display: block;
+    }
+
+    &:nth-child(4):before, {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .features {
+    &-container {
+      width: min(100%, 1640px);
+    }
+
+    &__item {
+      width: 50%;
+      padding: min(2.6vw, 40px);
+
+      &-img {
+        position: relative;
+        overflow: hidden;
+        width: min(9.7vw, 150px);
+        height: min(9.7vw, 150px);
+        margin-bottom: min(1.3vw, 20px);
+
+        img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      &-text {
+        font-size: min(3.54vw, 62px);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .features {
+
+    &__item {
+      padding: min(2.93vw, 22px);
+
+      &-img {
+        width: min(6.66vw, 50px);
+        height: min(6.66vw, 50px);
+        margin-bottom: min(2vw, 15px);
+      }
+
+      &-text {
+        font-size: min(2.93vw, 22px);
+      }
+    }
+  }
+}
+
