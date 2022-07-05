@@ -1,0 +1,161 @@
+@import "../../styles/variables";
+
+@mixin back($back-color) {
+  position: absolute;
+  content: '';
+  background: $back-color;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  z-index: -1;
+  top: 0;
+}
+
+@mixin back-img($url) {
+  position: absolute;
+  content: '';
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+}
+
+.mobile-events {
+  display: none;
+
+  .dedicated-container {
+    padding: min(5.33vw, 40px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    &.interactive {
+      position: relative;
+
+      .mobile-events__item-logo {
+        width: min(11.2vw, 84px);
+        height: min(14.4vw, 108px);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .mobile-events__item-button {
+        color: $dark-orange;
+      }
+
+      &:before {
+        @include back($dark-orange);
+      }
+
+      &:after {
+        @include back-img('../assets/images/events/webp/eye.webp')
+      }
+    }
+
+    &.internal {
+      position: relative;
+
+      .mobile-events__item-logo {
+        width: min(10.26vw, 77px);
+        height: min(13.73vw, 103px);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .mobile-events__item-button {
+        color: $yellow-orange;
+      }
+
+      &:before {
+        @include back($yellow-orange)
+      }
+
+      &:after {
+        @include back-img('../assets/images/events/webp/office_speaking.webp')
+      }
+    }
+
+    &.external {
+      position: relative;
+
+      .mobile-events__item-logo {
+        width: min(10vw, 75px);
+        height: min(16.4vw, 123px);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .mobile-events__item-button {
+        color: $green;
+      }
+
+      &:before {
+        @include back($green)
+      }
+
+      &:after {
+        @include back-img('../assets/images/events/webp/public_speaking.webp')
+      }
+    }
+
+
+    &-title {
+      color: $primary-white;
+      font-size: min(8vw, 60px);
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: min(12.66vw, 95px);
+
+      span {
+        font-size: min(9vw, 68px);
+        font-weight: 700;
+      }
+    }
+
+    .content-wrapper {
+      display: flex;
+      column-gap: 30px;
+      margin-bottom: min(6.66vw, 50px);
+    }
+
+    &-text {
+      max-width: 80%;
+      font-weight: 300;
+      color: $primary-white;
+      font-size: min(3.86vw, 29px);
+      line-height: 1.5em;
+      letter-spacing: 0.01em;
+    }
+
+    &-button {
+      font-size: min(3.6vw, 27px);
+      font-weight: 500;
+      background-color: $primary-white;
+      border-radius: 1em;
+      padding: .5em 1em;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-events {
+    display: block;
+  }
+}
