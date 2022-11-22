@@ -2,12 +2,12 @@
 @import "fonts";
 @import "global";
 
-@import "pages/header";
-@import "pages/how-it-works";
-@import "pages/interaction";
-@import "pages/features";
-@import "pages/partners";
-@import "pages/desktop-events";
-@import "pages/mobile-events";
-@import "pages/about-us";
-@import "pages/footer";
+@import "src/styles/sections/header";
+@import "src/styles/sections/how-it-works";
+@import "src/styles/sections/interaction";
+@import "src/styles/sections/features";
+@import "src/styles/sections/partners";
+@import "src/styles/sections/desktop-events";
+@import "src/styles/sections/mobile-events";
+@import "src/styles/sections/about-us";
+@import "src/styles/sections/footer";
