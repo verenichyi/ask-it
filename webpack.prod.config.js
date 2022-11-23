@@ -53,10 +53,6 @@ module.exports = {
           filename: 'icons/[hash][ext]',
         },
       },
-      {
-        test: /\.(webp)$/,
-        use: ['file-loader', 'webp-loader'],
-      },
     ],
   },
   resolve: {
