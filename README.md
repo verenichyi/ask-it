@@ -1,3 +1,3 @@
 
-# Responsive Web Page https://amazing-trifle-064960.netlify.app/
+# Responsive Web Page https://ask-it-responsive-page.netlify.app/
 ## HTML, SCSS, JS, Webpack
